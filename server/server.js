@@ -2,12 +2,14 @@ const express = require('express'),
       path = require('path')
 
 require('dotenv').config()
+const PORT = process.env.PORT || 4000;
 
 app = express()
 
 var todoApi = require('./routes')
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
+const { prototype } = require('stream')
 
 const logger = (req, res, next) => {
     console.log(`${req.method} request for '${req.url}'`)
@@ -27,6 +29,6 @@ app.get('/', function(req, res) {
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGOLAB_URI, { useNewUrlParser: true }, () => {
-app.listen(4000, () => console.log("Server Up and running"));
+app.listen(PORT, () => console.log("Server Up and running"));
 });
 module.exports = app
