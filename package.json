@@ -1,16 +1,28 @@
 {
-  "name": "todolist-server",
+  "name": "todolist-getir",
   "version": "1.0.0",
   "description": "To Do List with MongoDB",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start": "npm-run-all --parallel dev-server dev-client",
     "dev-server": "nodemon ./server/server.js --watch --ignore components",
-    "dev-client": "webpack serve --port 4001"
+    "dev-client": "webpack serve --port 4002"
   },
   "author": "oral",
   "license": "ISC",
   "devDependencies": {
+    "@material-ui/core": "^4.11.3",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "favicons": "^6.2.1",
+    "favicons-webpack-plugin": "^5.0.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
     "react-bootstrap": "^1.5.2",
     "style-loader": "^0.18.2",
     "url-loader": "^4.1.1",
