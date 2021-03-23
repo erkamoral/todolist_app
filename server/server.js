@@ -27,7 +27,6 @@ app.get('/', function(req, res) {
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGOLAB_URI, { useNewUrlParser: true }, () => {
-console.log("Connected to db!");
 app.listen(4000, () => console.log("Server Up and running"));
 });
 module.exports = app

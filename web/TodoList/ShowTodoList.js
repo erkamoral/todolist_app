@@ -27,7 +27,6 @@ class ShowTodoList extends Component {
         this.setEditingItem("")
     }
     lookItem(look_durum){
-        console.log(look_durum)
         let durum_obj=document.getElementsByClassName('tamam')
         if (look_durum == "tamam"){
             durum_obj = document.getElementsByClassName('devam')
@@ -57,30 +56,24 @@ class ShowTodoList extends Component {
         }
     }
     toggleItem(durum, id){
-        console.log(durum)
         if(durum == "devam"){
             durum ="tamam"
         }
         else {
             durum="devam"
         }
-        console.log(durum)
         this.props.onToggle(id, durum)
     }
 
     render() {
         const { store } = this.context
         const state = store.getState()
-        console.log(state)
         return (
             <div>
                 <LookTodoItem
                     onLook={(look_durum)=>this.lookItem(look_durum)}>
                 </LookTodoItem>
                 {state.todos.map((todo,i) => {
-                    console.log(todo,i)
-                    
-
                     if(todo.id === this.state.editing) {
                         return (
                             
