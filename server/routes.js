@@ -18,7 +18,7 @@ router.post('/todos', async function (req, res) {
         res.send('Posted Todo: ' + req.body.title)
     })
 })
-
+//getting what todos
 router.get('/todos', function (req, res) {
 
     Todo.find({}, {'title': 1, 'durum': 1, 'id': 1, '_id':0},function (err, allTodos) {
@@ -26,7 +26,7 @@ router.get('/todos', function (req, res) {
         res.send(allTodos)
     })
 })
-
+//remove todos
 router.delete('/todos/:id', function (req, res) {
 
     Todo.find({id: req.params.id}).deleteOne(function (err, obj) {
@@ -34,7 +34,7 @@ router.delete('/todos/:id', function (req, res) {
         res.status("200").send("deleted")
     })
 })
-
+//edit todos like change title or change state(durum)
 router.put('/todos/:id', function (req, res) {
     if (!req.body.title){
     Todo.updateMany({id: req.params.id},    //condition
