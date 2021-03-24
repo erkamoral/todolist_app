@@ -8,10 +8,10 @@ module.exports = {
         app: ["./index.js"]
     },
     output: {
-        path: path.resolve(__dirname, "build"),
-        publicPath: "/assets/",
-        filename: "bundle.js",
-    },
+        path: path.join(__dirname, 'build'),
+        publicPath: './',
+        filename: 'bundle.js'
+      },
     devServer: {
         contentBase: "./build",
     },
@@ -29,5 +29,8 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
                 } 
             ]
-    }
+    },
+    plugins: [ new HtmlWebpackPlugin({
+        template: 'server/index.html',
+      }),]
 };
