@@ -3,17 +3,17 @@ var webpack = require("webpack");
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: {
         app: ["./web/index.js"]
     },
     output: {
-        path: path.resolve(__dirname, "build"),
+        path: path.resolve(__dirname, "server"),
         publicPath: "./",
         filename: "bundle.js"
     },
     devServer: {
-        contentBase: "./build",
+        contentBase: "./server",
     },
     module: {
         rules:  [{
