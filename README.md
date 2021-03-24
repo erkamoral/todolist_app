@@ -63,6 +63,6 @@ $  npm run start
 
 The app will be automatically in your browser at <http://localhost:8080/>.
 
-## Oral
+## Author
 
-Hongkuan Wang
+Oral
