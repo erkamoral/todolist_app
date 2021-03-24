@@ -10,12 +10,13 @@ import { fetchTodos } from './actions'
 
 window.React = React
 
-const store_ = storeFactory()
+const _store = storeFactory()
 
 //Get todos for initial list render
+_store.dispatch(fetchTodos())
 
 render(
-  <Provider store={store_}>
+  <Provider store={_store}>
       <TodoListApp />
   </Provider>,
   document.getElementById("react-container")
