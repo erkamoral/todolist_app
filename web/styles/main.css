@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size:20px;
+    background: whitesmoke;
+    color: white;
+}
+
+.custom-row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+}
+
+
+ select,  button{
+    font-family: 'Open Sans', sans-serif;
+    font-size:25px;
+    color: white;
+    background: rgb(93, 62, 188);
+    border-radius: 300px;
+    border: 1px solid #ccc;
+    outline: none;
+    font: icon;
+}
+select:hover,button:hover{
+    cursor: pointer;
+}
+
+input, textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size:16px;
+    color: rgb(93, 62, 188);
+    font-weight: 600;
+    background: rgb(255, 255, 255);;
+    border-radius: 300px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.container{
+    display: grid;
+}
+
+.todo-add-form input {
+    height: 35px;
+    width: 340px;
+    padding: 3px 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    display: block;
+    margin-top:30px;
+}
+
+.todo-add-form button {
+    height: 35px;
+    padding: 3px 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    display: block;
+    margin-top: 30px;
+}
+.todo-edit-btn {
+    color: #83d694;
+    float: right;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+.todo-edit-btn:hover, .todo-rm-btn:hover{
+    cursor: pointer;
+}
+
+.todo-edit-btn.start {
+    color:rgb(93, 62, 188);
+}
+.todo-rm-btn {
+    color:darkred;
+    float: right;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.todo-header{
+    color:rgb(93, 62, 188);
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+}
+.todo-item {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    width: auto;
+    background: rgba(208, 145, 223, 0.26);
+    padding: 10px;
+    display: block;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: rgb(93, 62, 188);
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.todo-look {
+    align-items: center;
+    width: 20%;
+}
+
+.todo-item.edit {
+    padding-top:7px;
+}
+.todo-item.edit div{
+    padding-top: 3px;
+}
+
+.todo-title {
+    display: inline;
+    overflow-wrap: break-word;
+}
+.todo-title:hover {
+    cursor: pointer;
+}
+.todo-title.devam{
+    text-decoration: line-through;
+    color: rgb(24, 137, 119);
+}
