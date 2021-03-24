@@ -1,6 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
     mode: 'production',
@@ -42,5 +43,6 @@ module.exports = {
             new webpack.ProvidePlugin({
               process: 'process/browser',
             }),
+        new FaviconsWebpackPlugin('./web/favicon.png') 
         ]
 };

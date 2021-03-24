@@ -3927,7 +3927,7 @@ fastparse@^1.1.2:
 
 favicons-webpack-plugin@^5.0.2:
   version "5.0.2"
-  resolved "https://registry.npmjs.org/favicons-webpack-plugin/-/favicons-webpack-plugin-5.0.2.tgz"
+  resolved "https://registry.yarnpkg.com/favicons-webpack-plugin/-/favicons-webpack-plugin-5.0.2.tgz#0837a753ee4485785fa2cec1c3b83472f9ff60ce"
   integrity sha512-D/A+Ze0x57+YZBU69hK/lR3NI636qQnKduWyQm0THGl1y3jt16whPHHsi8yjsuXvetv84Eh/I/yYJbAMC2iQxg==
   dependencies:
     "@types/favicons" "5.5.0"
@@ -3939,7 +3939,7 @@ favicons-webpack-plugin@^5.0.2:
 
 favicons@^6.2.1:
   version "6.2.1"
-  resolved "https://registry.npmjs.org/favicons/-/favicons-6.2.1.tgz"
+  resolved "https://registry.yarnpkg.com/favicons/-/favicons-6.2.1.tgz#e2d6f3233a82aec8e2b2a05eef2ddb68d4a8d6df"
   integrity sha512-6Vh1CYubenqks9XXoPGU7NXtF56am0Lb98puIV4Q1FHxm0cexFzmvxP+5nBfJvFpi/r+LxIs8umAnUuiGgOJWg==
   dependencies:
     clone "^2.1.2"
