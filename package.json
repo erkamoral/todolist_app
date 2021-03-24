@@ -4,9 +4,9 @@
   "description": "To Do List with MongoDB",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel dev-server dev-client",
-    "dev-server": "nodemon ./server/server.js --watch --ignore components",
-    "dev-client": "webpack serve --port 4002"
+    "dev": "webpack serve ",
+    "start": "node server/server.js",
+    "build": "webpack --mode production"
   },
   "author": "oral",
   "license": "ISC",
@@ -22,6 +22,7 @@
     "favicons": "^6.2.1",
     "favicons-webpack-plugin": "^5.0.2",
     "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
     "react-bootstrap": "^1.5.2",
     "style-loader": "^0.18.2",

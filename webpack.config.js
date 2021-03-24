@@ -1,5 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+
 module.exports = {
     mode: 'development',
     entry: {
@@ -8,7 +10,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "build"),
         publicPath: "/assets/",
-        filename: "bundle.js",
+        filename: "bundle.js"
     },
     devServer: {
         contentBase: "./build",
@@ -27,5 +29,11 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
                 } 
             ]
-    }
+    },
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: "./server/index.html",
+            filename: "./index.html"
+        })
+    ]
 };
