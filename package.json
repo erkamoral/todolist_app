@@ -4,10 +4,10 @@
   "description": "To Do List with MongoDB",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all --parallel dev-server dev-client",
-    "dev-server": "nodemon ./server/server.js --watch --ignore components",
-    "dev-client": "webpack-dev-server"
+    "start": "nodemon ./server/server.js --watch --ignore components",
+    "build": "webpack"
   },
+  "heroku-run-build-script": true,
   "author": "oral",
   "license": "ISC",
   "devDependencies": {
