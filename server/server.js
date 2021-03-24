@@ -4,13 +4,12 @@ const express = require('express'),
 require('dotenv').config()
 
 app = express()
-
 var todoApi = require('./routes')
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
 const { prototype } = require('stream')
 
-//define logger
+//define logger and next
 const logger = (req, res, next) => {
     console.log(`${req.method} request for '${req.url}'`)
     next()
@@ -28,6 +27,13 @@ app.use(express.static('server'))
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
+
+app.get('api/todos', function (req, res) {
+  Todo.find({}, {'title': 1, 'durum': 1, 'id': 1, '_id':0},function (err, allTodos) {
+      if (err) return console.error(err)
+      res.send(allTodos)
+  })
+})
 
 //app listening
 var server = app.listen(app.get('port'), function() {
