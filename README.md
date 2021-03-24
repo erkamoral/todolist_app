@@ -1,5 +1,4 @@
-# todolist_app
-To Do List app with MongoDB 
+Todolist App with MongoDB 
 
 can reach to app  with https://getir-todolist-app.herokuapp.com/
 
