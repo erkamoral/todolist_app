@@ -38,6 +38,9 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./server/index.html",
             filename: "./index.html"
-        })
-    ]
+        }),
+            new webpack.ProvidePlugin({
+              process: 'process/browser',
+            }),
+        ]
 };
