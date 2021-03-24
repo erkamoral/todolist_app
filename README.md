@@ -8,11 +8,11 @@ can reach to app  with https://getir-todolist-app.herokuapp.com/
 
 # Features
 
-- you can add a new task to their to-do list.
-- you can list their tasks in the list like complete/incomplete
-- you can change state of todos like complete/incomplete
-- you can change the status of the todos, name
-- you can remove todos
+- you can add a new task to your to-do list.
+- you can list your tasks in the list like complete/incomplete
+- you can change state of tasks like complete/incomplete
+- you can change the status of the tasks, name
+- you can remove tasks
 - all movements are written to the database (Mongodb)
 
 
