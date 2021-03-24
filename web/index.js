@@ -13,7 +13,6 @@ window.React = React
 const store_ = storeFactory()
 
 //Get todos for initial list render
-// store_.dispatch(fetchTodos())
 
 render(
   <Provider store={store_}>

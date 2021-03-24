@@ -11,7 +11,7 @@ export const AddTodoContainer = connect(
         }
     })
 )(AddTodoForm)
-
+//dispatching remove-edit-durum functions 
 export const TodoListContainer = connect(
     state => ({
         todos: state.todos,

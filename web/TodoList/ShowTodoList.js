@@ -26,6 +26,8 @@ class ShowTodoList extends Component {
         this.props.onEdit(id, new_title)
         this.setEditingItem("")
     }
+
+    //hide and show todos by todos durum state
     lookItem(look_durum){
         let durum_obj=document.getElementsByClassName('tamam')
         if (look_durum == "tamam"){
@@ -55,6 +57,8 @@ class ShowTodoList extends Component {
             }
         }
     }
+
+    //changing durum state of todos 
     toggleItem(durum, id){
         if(durum == "devam"){
             durum ="tamam"
@@ -96,11 +100,9 @@ class ShowTodoList extends Component {
                     }
                 })}
             </div>
-        )//return
-    }//render
+        )
+    }
 }
-                                // todo.durum=="devam" ? todo.durum="tamam" : todo.durum="devam";
-                                // this.toggleItem(todo.durum, todo.id)
 ShowTodoList.contextTypes = {
     store: PropTypes.object
 }

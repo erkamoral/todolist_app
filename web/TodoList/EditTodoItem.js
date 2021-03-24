@@ -2,6 +2,7 @@ const EditTodoItem = ({onRemove=f=>f, onEdit=f=>f, title}) => {
     let new_title = ''
 
     return (
+        //adding todo-item edit object when edit state
         <div className="todo-item edit container">
             <div className="custom-row">
             <input className="col-10" autoFocus placeholder="İşi düzenle..."
@@ -16,7 +17,7 @@ const EditTodoItem = ({onRemove=f=>f, onEdit=f=>f, title}) => {
             <div onClick={onRemove} className="todo-rm-btn col-1">✘</div>
         </div>
         </div>
-    )//return
+    )
 }
 
 export default EditTodoItem

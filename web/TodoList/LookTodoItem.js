@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, ButtonGroup } from '@material-ui/core';
-
+//filter todos by todos states of durum
 const look_durum = "hepsi"
 const LookTodoItem = ({onLook=f=>f}) =>
 <div className="todo-look container">

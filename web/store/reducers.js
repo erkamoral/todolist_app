@@ -1,5 +1,5 @@
 import C from '../constants.js'
-
+//switch cases actions with constants parameters
 export const todos = (state={}, action) => {
     switch (action.type) {
         case C.ADD_TODO:

@@ -8,14 +8,14 @@ export const addTodoPreFetch = (title,durum) => ({
         title,
         durum
     })
-
+//adding todo
 export const addTodo = (title,durum) => {
     return dispatch => {
 
         //Perform expected result of the POST API request
         dispatch(addTodoPreFetch(title,durum))
 
-        //API call to POST a new todo with {title}
+        //API call to POST a new todo with titles
         return fetch('/api/todos', {
             method: 'POST',
             body: JSON.stringify({ title: title, durum: durum }),
@@ -29,7 +29,7 @@ export const addTodo = (title,durum) => {
         )
     }
 }
-
+//deleting todo
 export const removeTodoPreFetch = (id) => ({
         type: C.REMOVE_TODO,
         id: id
@@ -41,7 +41,7 @@ export const removeTodo = (id) => {
         //Perform expected result of the DELETE API request
         dispatch(removeTodoPreFetch(id))
 
-        //API call to delete todo {id}
+        //API call to delete todo id
         return fetch('/api/todos/' + id, {
             method: 'DELETE'
         })
@@ -51,7 +51,7 @@ export const removeTodo = (id) => {
         )
     }
 }
-
+//editing todos
 export const editTodoPreFetch = (id, title) => ({
         type: C.EDIT_TODO,
         id: id,
@@ -64,7 +64,7 @@ export const editTodo = (id, title) => {
         //Perform expected result of the PUT API request
         dispatch(editTodoPreFetch(id, title))
 
-        //API call to edit todo {id}, with new title: {title}
+        //API call to edit todo {id}, with new title: title
         return fetch('/api/todos/' + id, {
             method: 'PUT',
             body: JSON.stringify({ title: title, id: id}),
@@ -76,7 +76,7 @@ export const editTodo = (id, title) => {
         )
     }
 }
-
+//edit durum of todos
 export const toggleTodoPreFetch = (id, durum) => ({
     type: C.DURUM_TODO,
     id: id,
@@ -90,7 +90,7 @@ return dispatch => {
     //Perform expected result of the PUT API request
     dispatch(toggleTodoPreFetch(id, durum))
 
-    //API call to edit todo {id}, with new title: {title}
+    //API call to edit todo with new durum : durum
     return fetch('/api/todos/' + id, {
         method: 'PUT',
         body: JSON.stringify({id: id, durum: durum,}),

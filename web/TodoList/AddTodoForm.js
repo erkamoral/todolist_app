@@ -8,7 +8,7 @@ class AddTodoForm extends Component {
     
 
     render () {
-        
+        //adding input and button for adding todo and create func which is onAdd
         let title = ''
         let durum = "devam"
         const {store} = this.context
