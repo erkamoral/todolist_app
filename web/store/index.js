@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import {composeWithDevTools} from 'redux-devtools-extension/developmentOnly';
 
 const logger = store => next => action => {
     let result
@@ -30,9 +31,8 @@ const storeFactory = (initialState=stateData) =>
             JSON.parse(localStorage['redux-store']) :
             stateData
         ),
-        compose(
-        applyMiddleware(thunk, logger, saver),
-        window.devToolsExtension ? window.devToolsExtension(): f)
-    )
+        composeWithDevTools(
+        applyMiddleware(thunk, logger, saver)
+    ))
 
 export default storeFactory
