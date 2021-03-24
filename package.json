@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all --parallel dev-server dev-client",
     "dev-server": "nodemon ./server/server.js --watch --ignore components",
-    "dev-client": "webpack serve"
+    "dev-client": "webpack-dev-server"
   },
   "author": "oral",
   "license": "ISC",
