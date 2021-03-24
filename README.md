@@ -1,5 +1,8 @@
 # todolist_app
 To Do List app with MongoDB 
+
+![plot](https://github.com/erkamoral/todolist_app/blob/dev/img/todolist.png?raw=true "Title")
+
 # Features
 
 - you can add a new task to their to-do list.
@@ -9,15 +12,15 @@ To Do List app with MongoDB
 - you can remove todos
 - all movements are written to the database (Mongodb)
 
-![plot](https://github.com/erkamoral/todolist_app/blob/dev/img/todolist.png?raw=true "Title")
 
 # stack
 
 - mongoDB - used ATLAS which is free db
-- ![plot](https://github.com/erkamoral/todolist_app/blob/dev/img/mongodb.png?raw=true "Title")
 - react - a JavaScript library for building user interfaces
 - redux - a predictable state container for JavaScript apps
 - express - a Node.js web application framework
+
+![plot](https://github.com/erkamoral/todolist_app/blob/dev/img/mongodb.png?raw=true "Title")
 
 
 # setup
